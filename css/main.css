@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: #ecf0f1;
+}
+
+#winner {
+  width: 50%;
+  height: 600px;
+  position: absolute;
+  background: #818181;
+  display: none;
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid black;
+}
+#winner #texto {
+  width: 50%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 25%;
+  margin-top: 25%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 29px;
+  letter-spacing: -1.2px;
+  word-spacing: 2.2px;
+  color: white;
+  font-weight: 700;
+  text-decoration: none solid #444444;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+#winner .restart {
+  width: 50px;
+  height: 50px;
+  margin-top: 10%;
+  margin-left: 45%;
+  background: blue;
+  cursor: pointer;
+}
+
+#centro {
+  width: 550px;
+  height: 700px;
+  display: inline-block;
+}
+#centro #turno {
+  width: 550px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 29px;
+  letter-spacing: -1.2px;
+  word-spacing: 2.2px;
+  color: #1772FF;
+  font-weight: 700;
+  text-decoration: none solid #444444;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+#centro #espaciodejuego {
+  width: 550px;
+  height: 550px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+#centro #espaciodejuego .dropable {
+  width: 183.33px;
+  height: 183.33px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#centro #espaciodejuego #cc {
+  border: 1px solid gray;
+}
+#centro #espaciodejuego #ac {
+  border-right: 1px solid gray;
+  border-left: 1px solid gray;
+}
+#centro #espaciodejuego #cd {
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+}
+#centro #espaciodejuego #ci {
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+}
+#centro #espaciodejuego #abc {
+  border-right: 1px solid gray;
+  border-left: 1px solid gray;
+}
+
+#x {
+  width: 183.33px;
+  height: 183.33px;
+  background: gray;
+  margin-right: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#o {
+  width: 183.33px;
+  height: 183.33px;
+  background: gray;
+  margin-left: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.x {
+  width: 163.33px;
+  height: 163.33px;
+  background: #ecf0f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  letter-spacing: -1.2px;
+  word-spacing: 2.2px;
+  color: red;
+  font-weight: 700;
+  text-decoration: none solid #444444;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  cursor: pointer;
+}
+
+.o {
+  width: 163.33px;
+  height: 163.33px;
+  background: #ecf0f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  letter-spacing: -1.2px;
+  word-spacing: 2.2px;
+  color: green;
+  font-weight: 700;
+  text-decoration: none solid #444444;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=main.css.map */
