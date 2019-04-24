@@ -104,7 +104,7 @@ function turn(contador) {
         nuevax = document.createElement('div');
         nuevax.setAttribute("id", contador);
         nuevax.setAttribute("class", "x");
-        nuevax.innerHTML="X";
+        nuevax.innerHTML = "X";
         espacio.appendChild(nuevax);
         etiqueta.innerHTML = "Turno del jugador O";
     } else {
@@ -114,7 +114,7 @@ function turn(contador) {
         nuevao = document.createElement('div');
         nuevao.setAttribute("id", contador);
         nuevao.setAttribute("class", "o");
-        nuevao.innerHTML="O";
+        nuevao.innerHTML = "O";
         espacio.appendChild(nuevao);
         etiqueta.innerHTML = "Turno del jugador X";
 
@@ -124,6 +124,8 @@ function turn(contador) {
 }
 
 function ganador(posicion, turno) {
+
+    var confirmar = new Boolean(false);
 
     //dar puntaje en la matriz
     if (turno % 2 == 0) {
@@ -146,6 +148,7 @@ function ganador(posicion, turno) {
         ((matrix[2][0] == matrix[1][1]) && (matrix[2][0] == matrix[0][2]))
 
     ) {
+        confirmar=true;
         //dar puntaje en la matriz
         if (turno % 2 == 0) {
             let ganador = document.getElementById("winner");
@@ -165,9 +168,9 @@ function ganador(posicion, turno) {
             restart.addEventListener("click", restart, true);
             ganador.appendChild(restart);
 
-            
 
-        
+
+
 
         } else {
             let ganador = document.getElementById("winner");
@@ -190,6 +193,40 @@ function ganador(posicion, turno) {
 
     }
 
+    //////////////////////////////////////////
+    if (
+
+        (matrix[0][0] != "ai") && (matrix[0][1] != "ac") && (matrix[0][2] != "ad")
+        &&(matrix[1][0] != "ci") && (matrix[1][1] != "cc") && (matrix[1][2] != "cd")
+        &&(matrix[2][0] != "abi") && (matrix[2][1] != "abc") && (matrix[2][2] != "abd")
+        && (confirmar==false)
+
+    ){
+
+        console.log("empate");
+        let ganador = document.getElementById("winner");
+        ganador.style.display = "inline-block";
+
+        //letrero
+        letrero = document.createElement('div');
+        letrero.setAttribute("id", "texto");
+        letrero.setAttribute("class", "texto");
+        letrero.innerHTML = "Empate"
+        ganador.appendChild(letrero);
+
+        //boton de reinicio
+        restart = document.createElement('div');
+        restart.setAttribute("id", "restart");
+        restart.setAttribute("class", "restart");
+        restart.addEventListener("click", restart, true);
+        ganador.appendChild(restart);
+
+
+    }
+
+
+
+
 
 
 }
@@ -208,6 +245,6 @@ function recorrido(valor, posicion) {
     }
 }
 
-function restart(){
+function restart() {
     location.reload();
 }
